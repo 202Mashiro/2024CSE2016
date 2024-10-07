@@ -1,11 +1,17 @@
 package lecture03.temperature;
 
+import javax.swing.JOptionPane;
+
 public class View {
+    // 사용자가 섭씨 온도를 입력받는 메소드
     double getTemperature() {
-        return 0.0;
+        String input = JOptionPane.showInputDialog(null, "섭씨 온도를 입력하세요:");
+        int c = Integer.parseInt(input);
+        return c;
     }
 
+    // 섭씨 온도와 화씨 온도를 표시하는 메소드
     void showTemperature(double c, double f) {
-        System.out.println("섭씨 " + c + "도를 화씨로 바꾸면 " + f + "도입니다.");
+        JOptionPane.showMessageDialog(null, "섭씨 온도: " + c + "\n화씨 온도: " + f);
     }
 }
